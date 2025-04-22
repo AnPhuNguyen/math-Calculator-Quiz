@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Math Quiz</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <h1>Math Quiz</h1>
+    <form id="quizSettingsForm">
+        <label for="quizLength">Quiz Length:</label>
+        <select id="quizLength" name="quizLength" required>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+        </select>
+
+        <label for="quizDifficulty">Difficulty:</label>
+        <select id="quizDifficulty" name="quizDifficulty" required>
+            <option value="1">Easy (1-20)</option>
+            <option value="2">Normal (1-50)</option>
+            <option value="3">Hard (1-500)</option>
+        </select>
+
+        <label for="quizType">Question Type:</label>
+        <select id="quizType" name="quizType" required>
+            <option value="trivia">Trivia</option>
+            <option value="logic">Logic</option>
+            <option value="mix_up">Mix Up</option>
+        </select>
+
+        <label for="allowNegative">Allow Negative Numbers:</label>
+        <select id="allowNegative" name="allowNegative" required>
+            <option value="false">No</option>
+            <option value="true">Yes</option>
+        </select>
+
+        <button type="submit">Start Quiz</button>
+    </form>
+
+    <div id="quizContainer" style="display:none;">
+        <h2>Quiz Questions</h2>
+        <form id="quizForm"></form>
+        <button id="submitQuizBtn">Submit Answers</button>
+    </div>
+
+    <div id="quizResults" style="display:none;">
+        <h2>Quiz Results</h2>
+        <div id="resultsContainer"></div>
+        <canvas id="resultsChart" width="600" height="400"></canvas>
+    </div>
+
+    <button onclick="location.href='/'">Back to Home</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/quiz.js"></script>
+</body>
+</html>
