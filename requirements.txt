@@ -1,0 +1,5 @@
+fastapi, uvicorn -> for api
+pydantic
+fastapi.middleware.cors -> for Cross-Origin Resource Sharing ( just to make api connectable for html)
+random -> for randomize question in quiz
+typing
