@@ -1,4 +1,5 @@
 # Calculator and Quiz Web App
+<**this was made while in tenomad inc. internship**>
 
 This web application provides two main features:
 
